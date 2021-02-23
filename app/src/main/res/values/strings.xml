@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BolkarAssignment</string>
+    <string name="exit">✌ बाहर जाएं</string>
+    <string name="invite">+ आमंत्रित करें</string>
+    <string name="other_joined_users">अन्य यूजर जो जुड़ चुके हैं ।</string>
+    <string name="mic_button">Mic button</string>
+    <string name="image">Image</string>
+    <string name="group">Group</string>
+    <string name="profile_image">Profile image</string>
+    <string name="host_badge">host badge</string>
+</resources>

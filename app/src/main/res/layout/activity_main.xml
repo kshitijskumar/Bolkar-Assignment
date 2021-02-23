@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topicToolbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="@drawable/ic_back"
+                tools:title="Topic" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_people_12"
+                app:layout_constraintBottom_toBottomOf="@+id/ivAccountImg"
+                app:layout_constraintEnd_toStartOf="@+id/tvTotal"
+                app:layout_constraintTop_toTopOf="@+id/ivAccountImg"
+                android:contentDescription="@string/group" />
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/ivAccountImg"
+                app:layout_constraintEnd_toStartOf="@id/ivAccountImg"
+                app:layout_constraintTop_toTopOf="@id/ivAccountImg"
+                tools:text="5" />
+
+            <ImageView
+                android:id="@+id/ivAccountImg"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_account"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/image" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="14dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:layout_constraintBottom_toTopOf="@id/guideline2">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSpeakerHostMed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:padding="8dp"
+        android:text="@string/other_joined_users"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/cardView"
+        app:layout_constraintStart_toStartOf="@id/cardView"
+        app:layout_constraintTop_toBottomOf="@id/cardView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMembers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:scrollbars="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/tvVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/btnExit"
+        app:layout_constraintStart_toStartOf="@id/btnExit"
+        tools:text="1677" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="14dp"
+        android:elevation="10dp"
+        android:text="@string/exit"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnMic"
+        android:layout_width="54dp"
+        android:layout_height="0dp"
+        android:layout_margin="14dp"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_mic_off"
+        app:layout_constraintBottom_toBottomOf="@+id/btnInvite"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnInvite"
+        android:contentDescription="@string/mic_button" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnInvite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="14dp"
+        android:elevation="10dp"
+        android:text="@string/invite"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnMic" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

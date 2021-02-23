@@ -124,7 +124,9 @@
         android:layout_margin="14dp"
         android:elevation="10dp"
         android:text="@string/exit"
+        android:textColor="@color/red"
         app:cornerRadius="50dp"
+        android:backgroundTint="@color/light_red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -150,6 +152,7 @@
         android:layout_margin="14dp"
         android:elevation="10dp"
         android:text="@string/invite"
+        android:backgroundTint="@color/light_green"
         app:cornerRadius="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btnMic" />
